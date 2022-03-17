@@ -1,0 +1,143 @@
+/*
+Theme Name: Alec Fernandes Portfolio
+*/
+html,
+html body {
+  height: 100%; }
+html body .front-page {
+  height: 100%;
+  color: white;
+  overflow: auto;
+  scroll-behavior: smooth; }
+  html body .front-page > section {
+    min-height: 100%;
+    box-sizing: border-box; }
+    html body .front-page > section:not(#landing) {
+      padding-top: 80px; }
+    html body .front-page > section h1:not(.card-body h1):not(#landing h1),
+    html body .front-page > section h2:not(.card-body h2) {
+      text-decoration: underline solid blue 5px;
+      line-height: 90%;
+      font-weight: 100 !important; }
+    html body .front-page > section .card,
+    html body .front-page > section .site-section {
+      transition: 1s; }
+      html body .front-page > section .card:hover,
+      html body .front-page > section .site-section:hover {
+        box-shadow: 0 0 30px #888; }
+    html body .front-page > section#landing {
+      background-color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center; }
+      html body .front-page > section#landing #my-name {
+        font-size: 4rem;
+        margin: 0 auto 50px; }
+      html body .front-page > section#landing #site-sections {
+        display: flex;
+        gap: 50px;
+        justify-content: center; }
+        html body .front-page > section#landing #site-sections .site-section {
+          height: 100px;
+          width: 250px;
+          background-color: #444;
+          border: 0;
+          color: #ccc;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2rem;
+          line-height: 2rem;
+          text-align: center;
+          text-decoration: none; }
+          html body .front-page > section#landing #site-sections .site-section:hover {
+            background-color: #ccc !important;
+            color: #444 !important; }
+    html body .front-page > section#portfolio {
+      background-color: #444; }
+      html body .front-page > section#portfolio #skills,
+      html body .front-page > section#portfolio #web-apps,
+      html body .front-page > section#portfolio #client-sites {
+        padding-bottom: 80px; }
+      html body .front-page > section#portfolio #view-docs {
+        margin-bottom: 80px; }
+      html body .front-page > section#portfolio #skills,
+      html body .front-page > section#portfolio #skills .skill-icon {
+        display: flex;
+        align-content: center;
+        justify-content: left;
+        flex-wrap: wrap;
+        gap: 10px; }
+      html body .front-page > section#portfolio #skills .skill-icon {
+        font-size: 20px; }
+        html body .front-page > section#portfolio #skills .skill-icon img {
+          height: 30px;
+          width: auto; }
+      html body .front-page > section#portfolio #web-apps #web-apps-header {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        html body .front-page > section#portfolio #web-apps #web-apps-header #view-docs {
+          font-size: 20px; }
+      html body .front-page > section#portfolio #web-apps .project-links > *,
+      html body .front-page > section#portfolio #client-sites .project-links > * {
+        margin-top: 20px; }
+      html body .front-page > section#portfolio #web-apps .project-links a,
+      html body .front-page > section#portfolio #client-sites .project-links a {
+        text-decoration: none; }
+        html body .front-page > section#portfolio #web-apps .project-links a,
+        html body .front-page > section#portfolio #web-apps .project-links a .card,
+        html body .front-page > section#portfolio #client-sites .project-links a,
+        html body .front-page > section#portfolio #client-sites .project-links a .card {
+          height: 100%; }
+        html body .front-page > section#portfolio #web-apps .project-links a .card,
+        html body .front-page > section#portfolio #client-sites .project-links a .card {
+          background-color: #222;
+          color: #ccc;
+          text-align: center; }
+          html body .front-page > section#portfolio #web-apps .project-links a .card:hover,
+          html body .front-page > section#portfolio #client-sites .project-links a .card:hover {
+            color: white; }
+          html body .front-page > section#portfolio #web-apps .project-links a .card .card-body,
+          html body .front-page > section#portfolio #client-sites .project-links a .card .card-body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column; }
+            html body .front-page > section#portfolio #web-apps .project-links a .card .card-body h2,
+            html body .front-page > section#portfolio #client-sites .project-links a .card .card-body h2 {
+              font-size: 1.6rem; }
+    html body .front-page > section#graphic-design {
+      background-color: #222; }
+      html body .front-page > section#graphic-design #gallery {
+        height: 800px;
+        overflow-x: auto;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 15px; }
+        html body .front-page > section#graphic-design #gallery img {
+          height: auto;
+          width: 150px;
+          background-color: white;
+          border: 1px solid black;
+          border-radius: 10px; }
+    html body .front-page > section#docs {
+      background-color: #444; }
+  html body .front-page #navbar {
+    height: 40px;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999; }
+
+@media only screen and (max-width: 520px) {
+  #gallery {
+    height: 1200px !important; } }
+
+/*# sourceMappingURL=style.css.map */
