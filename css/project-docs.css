@@ -1,0 +1,16 @@
+.project-docs {
+  margin-top: 50px; }
+  .project-docs .latest-post-title {
+    background-color: #333;
+    padding: 10px; }
+    .project-docs .latest-post-title h3 {
+      font-style: italic;
+      font-weight: 100; }
+    .project-docs .latest-post-title small {
+      color: #999;
+      font-style: italic;
+      text-transform: uppercase; }
+  .project-docs .latest-content {
+    padding: 10px 10px 0; }
+
+/*# sourceMappingURL=project-docs.css.map */

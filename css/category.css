@@ -1,0 +1,31 @@
+#project-category #category-posts article {
+  overflow: hidden;
+  padding: 50px 10px 10px; }
+  #project-category #category-posts article .date {
+    color: var(--article-date-color);
+    font-style: italic; }
+  #project-category #category-posts article .linked-thumbnail {
+    height: auto;
+    max-width: 400px;
+    width: 50%;
+    float: right;
+    margin: 10px 0 10px 10px; }
+    #project-category #category-posts article .linked-thumbnail.single-post-thumb img {
+      margin: 10px auto 20px; }
+  #project-category #category-posts article .more-link {
+    display: inline-block;
+    font-style: italic; }
+  #project-category #category-posts article p {
+    color: var(--article-font-color); }
+
+#pagination {
+  display: flex;
+  font-weight: bold;
+  font-style: italic;
+  padding: 30px 0 40px; }
+  #pagination > * {
+    flex: 1; }
+  #pagination #next-page {
+    text-align: right; }
+
+/*# sourceMappingURL=category.css.map */

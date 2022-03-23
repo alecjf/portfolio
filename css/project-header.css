@@ -1,0 +1,17 @@
+.project-header {
+  background-color: #222;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px; }
+  .project-header h2 {
+    display: inline;
+    flex: 1;
+    font-weight: 100;
+    margin: 0;
+    white-space: nowrap; }
+  .project-header .docs-links {
+    display: flex;
+    gap: 10px; }
+
+/*# sourceMappingURL=project-header.css.map */

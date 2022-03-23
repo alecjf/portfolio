@@ -1,0 +1,38 @@
+#navbar {
+    min-height: 50px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+
+        a {
+            display: inline-block;
+            font-size: 0.9rem;
+            margin: 2.5px 15px;
+
+            &.highlighted {
+                color: red;
+            }
+
+            &.normal {
+                color: #ddd;
+            }
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}

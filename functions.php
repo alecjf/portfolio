@@ -14,6 +14,31 @@ function load_styles_and_scripts()
         get_stylesheet_directory_uri() . '/style.css'
     );
 
+    wp_enqueue_style(
+        'front_page_style',
+        get_stylesheet_directory_uri() . '/css/front-page.css'
+    );
+
+    wp_enqueue_style(
+        'navbar_style',
+        get_stylesheet_directory_uri() . '/css/navbar.css'
+    );
+
+    wp_enqueue_style(
+        'project_header_style',
+        get_stylesheet_directory_uri() . '/css/project-header.css'
+    );
+
+    wp_enqueue_style(
+        'project_docs_style',
+        get_stylesheet_directory_uri() . '/css/project-docs.css'
+    );
+
+    wp_enqueue_style(
+        'category_style',
+        get_stylesheet_directory_uri() . '/css/category.css'
+    );
+
     wp_enqueue_script(
         'main_script',
         get_stylesheet_directory_uri() . '/scripts.js',
@@ -30,3 +55,15 @@ function load_styles_and_scripts()
         true // loads in footer
     );
 }
+
+add_action('init', 'register_my_menus');
+
+function register_my_menus()
+{
+    register_nav_menus([
+        'navbar_menu' => 'Navbar Menu',
+    ]);
+}
+
+add_theme_support('title-tag');
+add_theme_support('post-thumbnails');
