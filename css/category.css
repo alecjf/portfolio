@@ -15,8 +15,10 @@
   #project-category #category-posts article .more-link {
     display: inline-block;
     font-style: italic; }
-  #project-category #category-posts article p {
-    color: var(--article-font-color); }
+  #project-category #category-posts article .title-link {
+    font-weight: 100 !important; }
+    #project-category #category-posts article .title-link.single-title {
+      font-size: 2.4rem; }
 
 #pagination {
   display: flex;

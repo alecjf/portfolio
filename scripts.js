@@ -12,50 +12,77 @@ function scrollToDocs() {
 
 // highlight navbar based on front-page scroll or single page url
 
-const navlinks = [
-        ...document.getElementById("navbar").getElementsByTagName("a"),
-    ],
-    front = document.getElementById("front-page");
-
-function getPositions() {
+function getPositions(navbuttons) {
     const result = {};
-    navlinks
-        .filter((navlink) => navlink.href.includes("#"))
-        .map((navlink) => navlink.href.split("#")[1])
+    navbuttons
+        .map((navbutton) => navbutton.getAttribute("data-id"))
         .forEach(
             (id) =>
             (result[id] =
-                document.getElementById(id)?.getBoundingClientRect().top +
-                front?.scrollTop)
+                document.getElementById(id).getBoundingClientRect().top +
+                front.scrollTop)
         );
     return result;
 }
 
-const positions = getPositions();
-
-function scrollHandler() {
-    const front = document.getElementById("front-page");
-    let highlight;
+function scrollHandler(positions, navbuttons) {
+    const cn = "highlighted",
+        front = document.getElementById("front-page"),
+        highlight = document.getElementsByClassName(cn)[0]?.getAttribute("data-id");
     if (front) {
-        highlight = Object.entries(positions)
-            .sort((a, b) => a[1] - b[1])
-            .filter(([k, v]) => v < front.scrollTop + 200)
-            .pop()?. [0];
+        const compare = nowViewingId(front.scrollTop, positions);
+        if (compare !== highlight) {
+            highlight && getNavButton(highlight, navbuttons).classList.remove(cn);
+            compare && getNavButton(compare, navbuttons).classList.add(cn);
+        }
     }
-    navlinks.forEach((navlink) => {
-        navlink.classList.remove("normal");
-        navlink.classList.remove("highlighted");
-        navlink.classList.add(
-            (front && navlink.href.includes("#" + highlight)) ||
-            (!front && navlink.href === window.location.href) ?
-            "highlighted" :
-            "normal"
-        );
-    });
 }
 
-window.onload = scrollHandler;
+function nowViewingId(scrollTop, positions) {
+    // find smallest difference in scroll position to find correct elem id:
+    const overlap = 200,
+        relativePositions = Object.entries(positions)
+        .map(([k, v]) => [k, scrollTop - v + overlap])
+        .filter(([k, v]) => v >= 0),
+        viewingId = relativePositions.sort((a, b) => a[1] - b[1])[0]?. [0];
+    // console.log(scrollTop, positions, viewingId);
+    // console.table(relativePositions);
+    return viewingId;
+}
 
+function getNavButton(highlight, navbuttons) {
+    return navbuttons.find(
+        (navbutton) => navbutton.getAttribute("data-id") === highlight
+    );
+}
+
+const front = document.getElementById("front-page"),
+    navlinks = [...document.getElementById("navbar").getElementsByTagName("a")];
+
+function frontPageScrolling(navbuttons, front) {
+    const positions = getPositions(navbuttons);
+    scrollHandler(positions, navbuttons);
+    front.onscroll = () => scrollHandler(positions, navbuttons);
+}
+
+// scroll buttons on front page for a smoother experience
+// (overrides default page-reloading behavior of anchor links)
 if (front) {
-    front.onscroll = scrollHandler;
+    navbuttons = navlinks
+        .filter((navlink) => navlink.href.includes("#"))
+        .map((anchorlink) => {
+            const button = document.createElement("button"),
+                id = anchorlink.href.split("#")[1];
+            button.setAttribute("data-id", id);
+            button.onclick = () => scrollToElem(id);
+            button.innerHTML = anchorlink.innerHTML;
+            anchorlink.parentNode.replaceChild(button, anchorlink);
+            return button;
+        });
+    frontPageScrolling(navbuttons, front);
+    window.onresize = () => frontPageScrolling(navbuttons, front);
+} else {
+    navlinks
+        .find((navlink) => navlink.href === window.location.href)
+        .classList.add("highlighted");
 }

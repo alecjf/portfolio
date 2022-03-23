@@ -7,6 +7,14 @@
     box-sizing: border-box; }
     #front-page > section:not(#landing) {
       padding-top: 80px; }
+      #front-page > section:not(#landing)#portfolio h1 {
+        margin-bottom: 40px; }
+        #front-page > section:not(#landing)#portfolio h1#client-sites-header, #front-page > section:not(#landing)#portfolio h1#web-apps-header {
+          margin-bottom: 30px; }
+      #front-page > section:not(#landing)#graphic-design h1 {
+        margin-bottom: 40px; }
+      #front-page > section:not(#landing)#docs h1 {
+        margin-bottom: 50px; }
     #front-page > section .card,
     #front-page > section .site-section {
       transition: 1s; }
@@ -55,7 +63,7 @@
       #front-page > section#portfolio #skills .skill-icon {
         display: flex;
         align-content: center;
-        justify-content: left;
+        justify-content: right;
         flex-wrap: wrap;
         gap: 10px; }
       #front-page > section#portfolio #skills .skill-icon {
@@ -99,7 +107,7 @@
       #front-page > section#graphic-design #gallery {
         height: 800px;
         display: flex;
-        align-content: flex-end;
+        align-content: center;
         justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;

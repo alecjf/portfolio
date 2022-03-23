@@ -10,6 +10,23 @@
 
         &:not(#landing) {
             padding-top: 80px;
+
+            &#portfolio h1 {
+                margin-bottom: 40px;
+
+                &#client-sites-header,
+                &#web-apps-header {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &#graphic-design h1 {
+                margin-bottom: 40px;
+            }
+
+            &#docs h1 {
+                margin-bottom: 50px;
+            }
         }
 
         .card,
@@ -80,7 +97,7 @@
                 .skill-icon {
                     display: flex;
                     align-content: center;
-                    justify-content: left;
+                    justify-content: right;
                     flex-wrap: wrap;
                     gap: 10px;
                 }
@@ -149,7 +166,7 @@
             #gallery {
                 height: 800px;
                 display: flex;
-                align-content: flex-end;
+                align-content: center;
                 justify-content: center;
                 flex-direction: column;
                 flex-wrap: wrap;

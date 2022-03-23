@@ -18,14 +18,14 @@ include_once 'projects-info.php';
       <section id="portfolio">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-5">
               <h1>Skills</h1>
               <p>
                 I am a web developer who is proficient in the following
                 languages and frameworks:
               </p>
             </div>
-            <div class="col-md-8" id="skills">
+            <div class="col-md-7" id="skills">
                 <?php
                 $icons = [
                     'javascript' => 'JavaScript',
@@ -93,7 +93,15 @@ include_once 'projects-info.php';
             <div class="row">
                 <div class="col-md-4">
                     <h1>Graphic Design</h1>
-                    <p>My work blah blah blah...</p>
+                    <?php
+                    $page = get_posts([
+                        'name' => 'graphic-design',
+                        'post_type' => 'page',
+                    ]);
+                    if ($page) {
+                        echo $page[0]->post_content;
+                    }
+                    ?>
                 </div>
                 <div id="gallery" class="col-md-8">
                     <?php

@@ -15,19 +15,22 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        text-transform: uppercase;
 
-        a {
+        a,
+        button {
+            background-color: transparent;
+            border: none;
+            color: #ddd !important;
             display: inline-block;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-weight: bold;
             margin: 2.5px 15px;
+            padding: 0;
+            text-decoration: none;
+            text-transform: uppercase;
 
             &.highlighted {
-                color: red;
-            }
-
-            &.normal {
-                color: #ddd;
+                color: red !important;
             }
 
             &:hover {

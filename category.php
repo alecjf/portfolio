@@ -16,7 +16,7 @@ get_template_part('templates/template', 'navbar');
                 the_post(); ?>
                 <article>
                     <?php if (is_single()): ?>
-                        <h3 class="title-link">
+                        <h3 class="title-link single-title">
                             <?php the_title(); ?>
                         </h3>
                         <p class="date"><?php echo get_the_date(); ?></p>

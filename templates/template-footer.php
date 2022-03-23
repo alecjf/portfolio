@@ -1,3 +1,3 @@
 <footer>
-    &copy; Alec Fernandes <span id="copyright-year">&nbsp;</span>
+    <p>&copy; Alec Fernandes <span id="copyright-year"></span></p>
 </footer>
