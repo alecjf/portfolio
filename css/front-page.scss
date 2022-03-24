@@ -5,7 +5,6 @@
 
     & > section {
         min-height: 100%;
-        // border: 2px solid blue;
         box-sizing: border-box;
 
         &:not(#landing) {
@@ -140,7 +139,9 @@
                         }
 
                         .card {
-                            background-color: #222;
+                            background-color: transparent;
+                            background-size: cover;
+                            background-position: top right;
                             color: #ccc;
                             text-align: center;
 
@@ -148,11 +149,37 @@
                                 color: white;
                             }
 
+                            &,
                             .card-body {
+                                border: 0;
+                                border-radius: 0.5rem;
+                            }
+
+                            .card-body {
+                                background-image: linear-gradient(to top, rgba(20, 20, 20, 0.8) 10rem, rgba(0, 0, 0, 0));
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
                                 flex-direction: column;
+                                gap: 20px;
+                                padding: 0 0 1rem;
+
+                                h2 {
+                                    width: 100%;
+                                    min-height: 50px;
+                                    background-color: rgba(255, 255, 255, 0.5);
+                                    border-radius: 0.5rem 0.5rem 0 0;
+                                    color: #222;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    padding: 5px;
+                                }
+
+                                .card-text {
+                                    color: white;
+                                    padding: 0 1rem;
+                                }
                             }
                         }
                     }

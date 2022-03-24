@@ -90,18 +90,44 @@
           height: 100%; }
         #front-page > section#portfolio #client-sites .project-links a .card,
         #front-page > section#portfolio #web-apps .project-links a .card {
-          background-color: #222;
+          background-color: transparent;
+          background-size: cover;
+          background-position: top right;
           color: #ccc;
           text-align: center; }
           #front-page > section#portfolio #client-sites .project-links a .card:hover,
           #front-page > section#portfolio #web-apps .project-links a .card:hover {
             color: white; }
+          #front-page > section#portfolio #client-sites .project-links a .card,
+          #front-page > section#portfolio #client-sites .project-links a .card .card-body,
+          #front-page > section#portfolio #web-apps .project-links a .card,
+          #front-page > section#portfolio #web-apps .project-links a .card .card-body {
+            border: 0;
+            border-radius: 0.5rem; }
           #front-page > section#portfolio #client-sites .project-links a .card .card-body,
           #front-page > section#portfolio #web-apps .project-links a .card .card-body {
+            background-image: linear-gradient(to top, rgba(20, 20, 20, 0.8) 10rem, rgba(0, 0, 0, 0));
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-direction: column; }
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 0 1rem; }
+            #front-page > section#portfolio #client-sites .project-links a .card .card-body h2,
+            #front-page > section#portfolio #web-apps .project-links a .card .card-body h2 {
+              width: 100%;
+              min-height: 50px;
+              background-color: rgba(255, 255, 255, 0.5);
+              border-radius: 0.5rem 0.5rem 0 0;
+              color: #222;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 5px; }
+            #front-page > section#portfolio #client-sites .project-links a .card .card-body .card-text,
+            #front-page > section#portfolio #web-apps .project-links a .card .card-body .card-text {
+              color: white;
+              padding: 0 1rem; }
     #front-page > section#graphic-design {
       background-color: #222; }
       #front-page > section#graphic-design #gallery {

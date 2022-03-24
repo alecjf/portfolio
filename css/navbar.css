@@ -1,6 +1,5 @@
 #navbar {
   min-height: 50px;
-  background-color: blue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,14 +20,13 @@
       color: #ddd !important;
       display: inline-block;
       font-size: 1rem;
-      font-weight: bold;
       margin: 2.5px 15px;
       padding: 0;
       text-decoration: none;
       text-transform: uppercase; }
       #navbar ul a.highlighted,
       #navbar ul button.highlighted {
-        color: red !important; }
+        color: #222 !important; }
       #navbar ul a:hover,
       #navbar ul button:hover {
         color: white; }

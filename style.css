@@ -7,17 +7,16 @@ html body.front {
 html body {
   background-color: #444;
   color: #ccc; }
-  html body a:not(#landing a):not(.skill-icon) {
+  html body a:not(#banner a):not(#landing a):not(.skill-icon),
+  html body button:not(#landing button) {
     font-weight: bold; }
   html body #banner {
     padding: 10px; }
     html body #banner a {
-      color: white !important;
-      text-decoration: underline solid blue 5px !important; }
+      color: white !important; }
   html body .container {
     max-width: 1000px; }
   html body h1:not(.card-body h1):not(#landing h1) {
-    text-decoration: underline solid blue 5px;
     line-height: 90%;
     font-weight: 100 !important; }
   html body p {

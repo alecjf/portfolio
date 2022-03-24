@@ -29,7 +29,7 @@ $name = get_category($id)->name; ?>
             endwhile;
             wp_reset_postdata();
         } else {
-            echo "<div class='latest-content'>No posts for " . $name . "</div>";
+            echo "<div class='latest-content'><p>No posts for " . $name . "</p></div>";
         }
         ?>
     </section>

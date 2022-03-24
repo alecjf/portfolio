@@ -1,5 +1,6 @@
 <?php
 
+// enqueue all stylesheets and script files
 add_action('wp_enqueue_scripts', 'load_styles_and_scripts');
 
 function load_styles_and_scripts()
@@ -56,6 +57,7 @@ function load_styles_and_scripts()
     );
 }
 
+// register menus
 add_action('init', 'register_my_menus');
 
 function register_my_menus()
@@ -65,5 +67,47 @@ function register_my_menus()
     ]);
 }
 
+// misc theme support
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
+
+// accent color in customizer
+add_action('customize_register', 'accent_color_picker');
+
+function accent_color_picker($wp_customize)
+{
+    // Add Section
+    $wp_customize->add_section('accent_link_color_section', [
+        'title' => 'Accent & Link Colors',
+        'description' =>
+            'Link color and accent color for header underlines and navbars.',
+        // study bookmarked link on WP hooks!
+        // 'priority' => '40',
+    ]);
+
+    // Add Settings
+    $wp_customize->add_setting('accent_color', [
+        'default' => '#0000FF',
+    ]);
+
+    $wp_customize->add_setting('link_color', [
+        'default' => '#0000FF',
+    ]);
+
+    // Add Controls
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control($wp_customize, 'accent_color', [
+            'label' => 'Accent Color',
+            'section' => 'accent_link_color_section',
+            'settings' => 'accent_color',
+        ])
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control($wp_customize, 'link_color', [
+            'label' => 'Link Color',
+            'section' => 'accent_link_color_section',
+            'settings' => 'link_color',
+        ])
+    );
+}

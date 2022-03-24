@@ -11,9 +11,9 @@ html {
     body {
         background-color: #444;
         color: #ccc;
-        $underline: underline solid blue 5px;
 
-        a:not(#landing a):not(.skill-icon) {
+        a:not(#banner a):not(#landing a):not(.skill-icon),
+        button:not(#landing button) {
             font-weight: bold;
         }
 
@@ -22,7 +22,6 @@ html {
 
             a {
                 color: white !important;
-                text-decoration: $underline !important;
             }
         }
 
@@ -31,7 +30,6 @@ html {
         }
 
         h1:not(.card-body h1):not(#landing h1) {
-            text-decoration: $underline;
             line-height: 90%;
             font-weight: 100 !important;
         }
