@@ -89,5 +89,5 @@ if (front) {
 } else {
     navlinks
         .find((navlink) => navlink.href === window.location.href)
-        .classList.add("highlighted");
+        ?.classList.add("highlighted");
 }

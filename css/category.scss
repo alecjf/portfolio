@@ -4,7 +4,11 @@
         article {
             // for containing floats:
             overflow: hidden;
-            padding: 50px 10px 10px;
+            padding: 40px 0 30px;
+
+            &:first-child {
+                padding-top: 60px;
+            }
 
             .date {
                 color: var(--article-date-color);

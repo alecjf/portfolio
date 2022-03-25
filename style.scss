@@ -9,7 +9,7 @@ html {
     }
 
     body {
-        background-color: white;
+        background-color: #efefef;
         color: #222;
         // glow hover effect
         #gallery a img,
@@ -26,7 +26,7 @@ html {
             }
         }
 
-        a:not(#banner a):not(#landing a):not(#navbar a):not(.btn):not(.skill-icon),
+        a:not(#landing a):not(#navbar a):not(.btn):not(.skill-icon),
         button:not(#landing button):not(#navbar button):not(.btn) {
             font-weight: bold;
 
@@ -41,12 +41,27 @@ html {
 
         #banner {
             background-color: #444;
-            margin: 0;
-            padding: 10px 10px 20px;
+            // dynamic inline style bg image in header.php
+            background-size: cover;
 
-            a {
-                color: white !important;
+            .bg-dimmer-layer {
+                padding: 10px 10px 20px;
+
+                h1 {
+                    margin: 0;
+
+                    a {
+                        color: #ccc !important;
+                    }
+                }
             }
+        }
+
+        .bg-dimmer-layer {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            flex: 1;
+            flex-direction: column;
         }
 
         .container {

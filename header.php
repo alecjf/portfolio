@@ -25,15 +25,12 @@
         .card h2 {
             transition: 1s;
         }
-        .card:hover h2 {
+        .card:hover h2, #landing .site-section, #navbar {
             background-color: <?php echo $accent_color; ?> !important;
             color: white !important;
         }
-        h1:not(.card-body h1):not(#landing h1) {
+        h1:not(.card-body h1) {
             text-decoration: var(--underline);
-        }
-        #navbar {
-            background-color: <?php echo $accent_color; ?>;
         }
         #navbar a:hover, #navbar button:hover, #navbar .highlighted {
             color: <?php echo $accent_color; ?> !important;
@@ -43,9 +40,14 @@
   </head>
   <body class="<?php echo is_front_page() ? 'front' : ''; ?>">
     <?php if (!is_front_page()): ?>
-        <h1 id="banner">
-            <a href="<?php echo get_home_url(); ?>" style="display: block;">
-            Alec Fernandes</a>
-        </h1>
+        <div id="banner" style="background-image: url(<?php echo get_stylesheet_directory_uri() .
+            '/images/section-bg/landing.png'; ?>);">
+            <div class="bg-dimmer-layer">
+                <h1>
+                    <a href="<?php echo get_home_url(); ?>" style="display: block;">
+                    Alec Fernandes</a>
+                </h1>
+            </div>
+        </div>
     <?php endif;
 ?>

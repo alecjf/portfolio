@@ -5,7 +5,7 @@ html,
 html body.front {
   height: 100%; }
 html body {
-  background-color: white;
+  background-color: #efefef;
   color: #222; }
   html body #gallery a img,
   html body #navbar a,
@@ -23,21 +23,29 @@ html body {
     html body .highlighted:hover,
     html body .site-section:hover {
       box-shadow: 0 0 30px #888; }
-  html body a:not(#banner a):not(#landing a):not(#navbar a):not(.btn):not(.skill-icon),
+  html body a:not(#landing a):not(#navbar a):not(.btn):not(.skill-icon),
   html body button:not(#landing button):not(#navbar button):not(.btn) {
     font-weight: bold; }
-    html body a:not(#banner a):not(#landing a):not(#navbar a):not(.btn):not(.skill-icon):not(button):not(#gallery a):not(.project-links a),
+    html body a:not(#landing a):not(#navbar a):not(.btn):not(.skill-icon):not(button):not(#gallery a):not(.project-links a),
     html body button:not(#landing button):not(#navbar button):not(.btn):not(button):not(#gallery a):not(.project-links a) {
       transition: 1s; }
-      html body a:not(#banner a):not(#landing a):not(#navbar a):not(.btn):not(.skill-icon):not(button):not(#gallery a):not(.project-links a):hover,
+      html body a:not(#landing a):not(#navbar a):not(.btn):not(.skill-icon):not(button):not(#gallery a):not(.project-links a):hover,
       html body button:not(#landing button):not(#navbar button):not(.btn):not(button):not(#gallery a):not(.project-links a):hover {
         opacity: 0.5; }
   html body #banner {
     background-color: #444;
-    margin: 0;
-    padding: 10px 10px 20px; }
-    html body #banner a {
-      color: white !important; }
+    background-size: cover; }
+    html body #banner .bg-dimmer-layer {
+      padding: 10px 10px 20px; }
+      html body #banner .bg-dimmer-layer h1 {
+        margin: 0; }
+        html body #banner .bg-dimmer-layer h1 a {
+          color: #ccc !important; }
+  html body .bg-dimmer-layer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    flex: 1;
+    flex-direction: column; }
   html body .container {
     max-width: 900px; }
   html body h1:not(.card-body h1):not(#landing h1) {
