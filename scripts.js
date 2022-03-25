@@ -1,4 +1,9 @@
 function scrollToElem(id) {
+    // add smooth scroll CSS property only when clicking the front-page buttons.
+    // this is a hack to prevent Chrome's weird "load and scroll" for
+    // anchor tags when this property is already in the stylesheet.
+    // (note: overflow-anchor: none; didn't work!)
+    document.getElementById("front-page").style.scrollBehavior = "smooth";
     document.getElementById(id).scrollIntoView();
 }
 

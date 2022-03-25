@@ -1,8 +1,7 @@
 #front-page {
   height: 100%;
   color: #ccc;
-  overflow: auto;
-  scroll-behavior: smooth; }
+  overflow: auto; }
   #front-page > section {
     min-height: 100%;
     box-sizing: border-box; }
