@@ -22,11 +22,21 @@
             background-color: <?php echo $accent_color; ?> !important;
             border: none !important;
         }
+        .card h2 {
+            transition: 1s;
+        }
+        .card:hover h2 {
+            background-color: <?php echo $accent_color; ?> !important;
+            color: white !important;
+        }
         h1:not(.card-body h1):not(#landing h1) {
             text-decoration: var(--underline);
         }
         #navbar {
             background-color: <?php echo $accent_color; ?>;
+        }
+        #navbar a:hover, #navbar button:hover, #navbar .highlighted {
+            color: <?php echo $accent_color; ?> !important;
         }
     </style>
     <?php wp_head(); ?>

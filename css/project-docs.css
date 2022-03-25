@@ -1,5 +1,5 @@
 .project-docs {
-  margin-bottom: 50px; }
+  padding-bottom: 15px; }
   .project-docs .latest-post-title {
     background-color: #333;
     padding: 10px; }
@@ -11,6 +11,7 @@
       font-style: italic;
       text-transform: uppercase; }
   .project-docs .latest-content {
-    padding: 10px 10px 0; }
+    border-bottom: 1px solid #666;
+    padding: 10px 10px 35px; }
 
 /*# sourceMappingURL=project-docs.css.map */

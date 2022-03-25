@@ -7,32 +7,44 @@
     top: 0;
     z-index: 999;
 
+    &,
+    & > * {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
     ul {
         display: flex;
+        flex: 1;
         flex-wrap: wrap;
         justify-content: center;
         list-style: none;
         margin: 0;
         padding: 0;
 
-        a,
-        button {
-            background-color: transparent;
-            border: none;
-            color: #ddd !important;
-            display: inline-block;
-            font-size: 1rem;
-            margin: 2.5px 15px;
-            padding: 0;
-            text-decoration: none;
-            text-transform: uppercase;
+        li {
+            a,
+            button {
+                height: 100%;
+                background-color: transparent;
+                border: none;
+                box-sizing: border-box;
+                color: #ddd !important;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1rem;
+                margin: 0;
+                padding: 5px 10px;
+                text-decoration: none;
+                text-shadow: -5px 3px 5px #222;
+                text-transform: uppercase;
 
-            &.highlighted {
-                color: #222 !important;
-            }
-
-            &:hover {
-                color: white;
+                &.highlighted,
+                &:hover {
+                    background-color: black;
+                }
             }
         }
     }
