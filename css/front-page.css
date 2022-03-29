@@ -4,6 +4,7 @@
   overflow: auto; }
   #front-page > section {
     min-height: 100%;
+    background-position: center;
     background-size: cover;
     box-sizing: border-box; }
     #front-page > section#docs,
