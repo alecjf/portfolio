@@ -8,7 +8,6 @@
   .project-header h2 {
     display: inline;
     flex: 1;
-    font-weight: 100;
     margin: 0;
     white-space: nowrap; }
   .project-header .docs-links {

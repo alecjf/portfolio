@@ -40,7 +40,7 @@ html body {
       html body #banner .bg-dimmer-layer h1 {
         margin: 0; }
         html body #banner .bg-dimmer-layer h1 a {
-          color: #ccc !important; }
+          color: white !important; }
   html body .bg-dimmer-layer {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
@@ -49,11 +49,9 @@ html body {
   html body .container {
     max-width: 900px; }
   html body h1:not(.card-body h1):not(#landing h1) {
-    line-height: 90%;
-    font-weight: 100 !important; }
+    line-height: 90%; }
   html body p {
-    font-size: 1.2rem;
-    font-weight: 100; }
+    font-size: 1.2rem; }
   html body .tags {
     font-size: 1rem;
     font-style: italic;

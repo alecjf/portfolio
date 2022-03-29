@@ -10,13 +10,23 @@
     ?>
     <style>
         :root{
-            --underline: underline solid <?php echo $accent_color; ?> 5px;
+            --line: underline;
+            --style: solid;
+            --thickness: 5px;
+            --underline: var(--line) var(--style) <?php echo $accent_color; ?> var(--thickness);
+        }
+        #banner a, h1:not(.card-body h1) {
+            text-decoration-color: <?php echo $accent_color; ?>;
+            text-decoration-line: var(--line);
+            text-decoration-style: var(--style);
+            text-decoration-thickness: var(--thickness);
+            -webkit-text-decoration-color: <?php echo $accent_color; ?>;
+            -webkit-text-decoration-line: var(--line);
+            -webkit-text-decoration-style: var(--style);
+            -webkit-text-decoration-thickness: var(--thickness);
         }
         a:not(.btn):not(#landing a):not(#navbar a):not(#banner a) {
             color: <?php echo $link_color; ?> !important;
-        }
-        #banner a {
-            text-decoration: var(--underline) !important;
         }
         .btn-primary {
             background-color: <?php echo $accent_color; ?> !important;
@@ -29,9 +39,6 @@
             background-color: <?php echo $accent_color; ?> !important;
             color: white !important;
         }
-        h1:not(.card-body h1) {
-            text-decoration: var(--underline);
-        }
         #navbar a:hover, #navbar button:hover, #navbar .highlighted {
             color: <?php echo $accent_color; ?> !important;
         }
@@ -41,7 +48,7 @@
   <body class="<?php echo is_front_page() ? 'front' : ''; ?>">
     <?php if (!is_front_page()): ?>
         <div id="banner" style="background-image: url(<?php echo get_stylesheet_directory_uri() .
-            '/images/section-bg/landing.png'; ?>);">
+            '/images/section-bg/landing.jpg'; ?>);">
             <div class="bg-dimmer-layer">
                 <h1>
                     <a href="<?php echo get_home_url(); ?>" style="display: block;">

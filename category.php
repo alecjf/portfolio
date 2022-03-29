@@ -25,13 +25,18 @@ get_template_part('templates/template', 'navbar');
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
                     <?php endif; ?>
-                    <a class="linked-thumbnail <?php echo is_single()
-                        ? 'single-post-thumb'
-                        : ''; ?>" href="<?php the_permalink(); ?>" style="<?php echo is_single()
-    ? 'float: none; margin: 0;'
-    : ''; ?>">
-                        <?php the_post_thumbnail(); ?>
-                    </a>
+                    <div class="<?php echo is_single()
+                        ? 'big'
+                        : 'small'; ?>-thumbnail">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail(); ?>
+                        </a>
+                        <?php
+                        $caption = get_the_post_thumbnail_caption();
+                        if($caption): ?>
+                        <div class="caption"><?php echo $caption; ?></div>
+                        <?php endif; ?>
+                    </div>
                     <?php
                     if (!is_single()): ?>
                     <p class="date"><?php echo get_the_date(); ?></p>

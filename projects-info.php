@@ -17,7 +17,7 @@
     'Workout Timer' => [
         'rel_url' => 'projects/workout',
         'image_url' => 'workout-timer-faded.png',
-        'github_repo' => 'workout',
+        'github_repo' => 'workout-timer',
     ],
     'Ascend Tree Service' => [
         'rel_url' => 'projects/ascend',

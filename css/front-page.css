@@ -1,6 +1,6 @@
 #front-page {
   height: 100%;
-  color: #ccc;
+  color: white;
   overflow: auto; }
   #front-page > section {
     min-height: 100%;
@@ -24,6 +24,7 @@
       justify-content: center;
       flex-direction: column; }
       #front-page > section#landing .bg-dimmer-layer {
+        background-color: rgba(0, 0, 0, 0.3);
         display: flex;
         justify-content: center;
         padding: 50px 0;
@@ -39,11 +40,12 @@
             margin: 0 0 15px; }
             #front-page > section#landing .bg-dimmer-layer #name-and-location #location img {
               height: 30px;
-              width: auto; }
+              width: auto;
+              filter: brightness(0) invert(1); }
           #front-page > section#landing .bg-dimmer-layer #name-and-location #site-name {
-            font-size: 5rem;
+            font-size: 4.5rem;
             font-weight: bold;
-            line-height: 5rem;
+            line-height: 4.5rem;
             margin: 0 auto; }
         #front-page > section#landing .bg-dimmer-layer #tagline {
           font-size: 2.25rem;
@@ -54,8 +56,8 @@
           gap: 50px;
           justify-content: center; }
           #front-page > section#landing .bg-dimmer-layer #site-sections .site-section {
-            height: 100px;
-            width: 260px;
+            height: 80px;
+            width: 235px;
             border: 0;
             border-radius: 20px;
             display: flex;
@@ -81,12 +83,12 @@
       margin: 0; }
     #front-page > section#portfolio #skills-row #skills-btns {
       align-content: flex-end;
+      flex-wrap: wrap;
       padding-top: 30px; }
       #front-page > section#portfolio #skills-row #skills-btns,
       #front-page > section#portfolio #skills-row #skills-btns .skill-icon {
         display: flex;
         justify-content: right;
-        flex-wrap: wrap;
         gap: 10px; }
       #front-page > section#portfolio #skills-row #skills-btns .skill-icon {
         align-content: center;
@@ -148,9 +150,9 @@
             padding: 5px; }
           #front-page > section#portfolio #client-sites .project-links a .card .card-body .card-text,
           #front-page > section#portfolio #web-apps .project-links a .card .card-body .card-text {
-            color: white;
-            padding: 0 1rem;
-            margin: 10px auto; }
+            font-weight: normal;
+            margin: 10px auto;
+            padding: 0 1rem; }
     #front-page > section#graphic-design {
       background-image: linear-gradient(to right, black, #333 25%, #333 75%, black); }
       #front-page > section#graphic-design #gallery {

@@ -16,7 +16,7 @@ function get_page_content($slug)
 
 <div id="front-page">
   <section id="landing" style="background-image: url(<?php echo get_stylesheet_directory_uri() .
-      '/images/section-bg/landing.png'; ?>);">
+      '/images/section-bg/landing.jpg'; ?>);">
     <div class="bg-dimmer-layer">
         <div class="container">
             <header id="name-and-location">
@@ -79,7 +79,7 @@ function get_page_content($slug)
           <?php function get_project_ids($cat_name)
           {
               return array_filter(
-                  explode("/", get_category_children(get_cat_id($cat_name)))
+                  get_term_children(get_cat_id($cat_name), "category")
               );
           } ?>
           <h1 id="web-apps-header">Web Apps</h1>

@@ -16,19 +16,37 @@
                 font-style: italic;
             }
 
-            .linked-thumbnail {
-                height: auto;
-                // max-height: 300px;
+            .big-thumbnail {
+                float: none;
+                margin: 0;
+
+                .caption {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .small-thumbnail {
                 max-width: 400px;
                 width: 50%;
                 float: right;
                 margin: 10px 0 10px 10px;
 
-                &.single-post-thumb {
-                    img {
-                        margin: 10px auto 20px;
-                    }
+                img {
+                    height: auto;
+                    // max-height: 300px;
+                    width: 100%;
                 }
+
+                .caption {
+                    background-color: #222;
+                    font-size: 1rem;
+                    padding: 2px 4px;
+                    text-align: center;
+                }
+            }
+
+            .caption {
+                color: #888;
             }
 
             .more-link {
@@ -37,7 +55,7 @@
             }
 
             .title-link {
-                font-weight: 100 !important;
+                // font-weight: 100 !important;
 
                 &.single-title {
                     font-size: 2.4rem;
